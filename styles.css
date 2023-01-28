@@ -65,6 +65,7 @@
 
 
 .hero{
+   
     position: relative;
     display: flex;
     justify-content: center;
@@ -74,6 +75,7 @@
     margin: 4rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
+   
 }
 .fade{
 
@@ -157,13 +159,14 @@ font-weight: 800;
 .pro{
     width: 400px;
     height: 500px;
-    z-index: -9;
+    
     position: relative;
     padding:2.5rem;
     filter:grayscale(1);
     transition: all 1s;
     animation: scaleimage 5s linear infinite;
 }
+
 
 
 
@@ -189,6 +192,7 @@ font-weight: 800;
 
 .hero-right{
     position: relative;
+    
 }
 .cube{
     z-index: 9;
@@ -214,7 +218,7 @@ font-weight: 800;
 
 .dots{
     z-index: 9;
-    bottom: 5em;
+    bottom: 2em;
     right: 0;
     position: absolute;
     animation: dot 4s linear infinite;
@@ -232,10 +236,11 @@ font-weight: 800;
 }
 
 .plus{
-    z-index: 9;
     position: absolute;
+    z-index: 9;
+    top: 0;
     right: 15em;
-    animation: plu 5s linear infinite;
+    animation: plu 4s linear infinite;
     
 
 }
@@ -251,4 +256,216 @@ font-weight: 800;
     }
 }
 
+.zig{
+    position: absolute;
+    z-index: 2;
+    top:1.5em;
+    left:-0.3em;
+    animation: zigu 5s linear infinite;
+}
 
+@keyframes zigu {
+    0%{
+        transform: translateX(0px);
+    }
+
+    50%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+
+
+.circle{
+    z-index: 9;
+    animation: circl 3s linear infinite;
+
+    
+}
+
+@keyframes circl {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    50%{
+        transform: translateX(20px)  translateY(-15px);
+    }
+    100%{
+        transform: translateX(0px)  translateY(0px);
+    }
+    
+}
+
+
+
+.projects{
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column; 
+    gap: 60px;
+
+    
+    position: relative;
+    background-color: rgb(231,231,231);
+    
+}
+.projects h1{
+    font-size:90px;
+    text-align:center;
+    padding-top:30px;
+}
+
+
+.first-pro{
+    margin-left: 10em;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+
+    
+}
+
+.go-left{
+    margin-left: 7em;
+}
+.first-pro-img{
+   
+    height: 550px;
+    background-image: url("./project/Project1.png");
+    background-size:cover ;
+}
+
+.first-pro-img::after{
+    content: "";
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background-color: #1f1f1f ;
+    position: absolute;
+    opacity: 0.6;
+    transition: all 1s;
+}
+
+.first-pro-img::before{
+    content: "";
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    position: absolute;
+    
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+
+.first-pro:hover .first-pro-img::before{
+    transform: scaleX(1);
+
+}
+.first-pro:hover .first-pro-img::after{
+    opacity: 0;
+
+}
+.first-pro:hover .above{
+    
+        transform: scale(1.2);
+    
+}
+
+.above{
+    margin-left: 10rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    gap: 10px;
+    transition: all 0.8s;
+}
+
+.project-skill{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.project-skill img{
+    width: 40px;
+    
+}
+.project-head{
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+}
+.project-des{
+    font-weight: 500;
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+}
+
+.btn-grp{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.project-btn{
+    background-color:  #e84949;
+    padding:0.8rem 2.3rem;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    transition: all 0.8s;
+}
+.project-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-btn::before{
+    content: "";
+    background-color:white;
+    color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    z-index: -1;
+
+}
+.project-btn:hover{
+    color: black;
+}
+.project-btn:hover::before{
+    
+    transform: scaleX(1);
+}
+
+.icon{
+    cursor:pointer;
+    color:white;
+    font-size:35px;
+}
+.icon:hover{
+    transform: scale(1.1);
+    color: #e84949;
+}
