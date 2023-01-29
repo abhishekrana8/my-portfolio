@@ -2,18 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 #wrapper
 {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .container{
     height: 100vh;
     width: 1200px;
-   
     margin: 0 auto; 
-    
-    
 } 
 
 .header{
@@ -51,15 +50,18 @@
 .navbar a{
     color: black;
     text-decoration: none;
+    
 }
 .navbar{
     font-size: 20px;
     font-weight: 500;
+    
    
 }
 .side div:hover {
     transition:1s ;
     font-weight: bold;
+    
 
 }
 
@@ -84,7 +86,7 @@
     font-size: 7em;
     color:rgb(231,231,231);
     
-    bottom: -16%;
+    bottom: -14%;
     left: -5%;
     font-weight: bold;
 }
@@ -120,6 +122,7 @@ font-weight: 800;
 
 
 .hire-button{
+    cursor: pointer;
     background-color:  #e84949;
     padding:0.8rem 2.3rem;
     color: white;
@@ -128,8 +131,7 @@ font-weight: 800;
     position: relative;
     z-index: 1;
     align-self: flex-start;
-
-
+   
 }
 
 .hire-button a{
@@ -311,9 +313,11 @@ font-weight: 800;
     
     position: relative;
     background-color: rgb(231,231,231);
+    padding-bottom: 50px;
     
 }
 .projects h1{
+    color: #e84949;
     font-size:90px;
     text-align:center;
     padding-top:30px;
@@ -333,6 +337,9 @@ font-weight: 800;
 
 .go-left{
     margin-left: 7em;
+}
+.go-right{
+    margin-left:12em;
 }
 .first-pro-img{
    
@@ -365,6 +372,9 @@ font-weight: 800;
     transform: scaleX(0);
     transform-origin: left;
     transition: all 0.8s;
+}
+.first-pro:hover .pro-num {
+    opacity: 1;
 }
 
 .first-pro:hover .first-pro-img::before{
@@ -468,4 +478,133 @@ font-weight: 800;
 .icon:hover{
     transform: scale(1.1);
     color: #e84949;
+}
+
+.pro-num{
+    position: absolute;
+    color: white;
+    z-index: 100;
+    right: -1%;
+    top: -6%;
+    font-size: 12rem;
+    opacity: 0;
+    transition: all 0.8s;
+
+}
+.pro-num-left{
+    position: absolute;
+    color: white;
+    z-index: 100;
+    left: -1%;
+    top: -6%;
+    font-size: 12rem;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.go-right:hover .pro-num-left{
+    opacity: 1;
+}
+.must-right{
+    padding-left: 12em;
+}
+
+#second-img{
+    background-image: url(./project/Project2.png);
+}
+#third-img{
+    background-image: url(./project/Project3.png);
+}
+#fourth-img{
+    background-image: url(./project/Project4.png);
+}
+
+.skill{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 50px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 15em;
+
+}
+
+.left-skill{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+}
+.left-skill h2{
+    font-size:50px;
+    font-style: bold;
+    color: #e84949;
+    line-height: 50px;
+}
+.left-skill p{
+    margin-top: 1rem;
+    width:85%;
+    text-align: justify;
+    
+}
+
+.skill-head span{
+    font-size: 80px;
+
+}
+.right-skill{
+   position: relative;
+   display: flex;
+   width: 50%;
+   justify-content: center;
+
+}
+.blob{
+    position: absolute;
+    z-index: -5;
+    margin-top: 5em;
+    margin-left: 8em;
+    animation: blo 5s linear infinite ;
+}
+@keyframes blo {
+    0%{
+        transform: translateX(0px) translateY(0px);
+
+    }
+    50%{
+        transform: translateX(20px) translateY(20px);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+    
+}
+
+.all-skills{
+    width: 90%;
+    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.all-skills img{
+    width: 90px;
+    transition: all 0.8s;
+}
+
+.all-skills img:hover{
+    transform: scale(1.1);
+
+}
+
+.fade-skill{
+    position: absolute;
+    user-select:none;
+    font-size: 7em;
+    color:rgb(231,231,231);
+    
+    bottom: -15%;
+    right: -5%;
+    font-weight: bold;
 }
